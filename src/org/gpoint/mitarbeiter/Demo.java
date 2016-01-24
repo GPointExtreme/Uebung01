@@ -8,9 +8,8 @@ public class Demo {
 		
 		Employee emp1 = new Employee("geiger", "dominik", "IT", 2000);
 		Employee emp2 = new Employee("erlacher", "david", "IT", 2000);
-		Employee emp3 = new Employee("philip", "kropik", "IT", 2000);
-		Employee emp4 = new Employee("vollassi", "toni", "MA", 800);
-		emp4 = new PercentCommissionEmployee("vollassi", "toni", "MA", 800, 10);
+		Employee emp3 = new FixCommissionEmployee("philip", "kropik", "IT", 2000, 500);
+		Employee emp4 = new PercentCommissionEmployee("vollassi", "toni", "MA", 800, 10);
 		
 		ArrayList<Employee> Map = new ArrayList<>();
 		
