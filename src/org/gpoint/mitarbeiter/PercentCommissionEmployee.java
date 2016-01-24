@@ -11,7 +11,7 @@ public class PercentCommissionEmployee extends Employee {
 	
 	@Override
 	public double getFullSalary() {
-		return super.getFullSalary() * (percentCommission / 100);
+		return super.getFullSalary() + (baseSalary * (percentCommission / 100));
 	}
 
 }

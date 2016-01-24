@@ -7,8 +7,13 @@ public class EmployeeManager {
 	
 	private ArrayList<Employee> emplyeeList = new ArrayList<>();
 	
+	public EmployeeManager(ArrayList<Employee> emplyeeList) {
+		super();
+		this.emplyeeList = emplyeeList;
+	}
+
 	public void addEmployee(Employee e) {
-		addEmployee(e);
+		emplyeeList.add(e);
 	}
 	
 	public double calcTotalSaralry() {
@@ -27,6 +32,9 @@ public class EmployeeManager {
 			if(Map.containsKey(employee.department)) {
 				temp = Map.get(employee.department); //schreibt den aktuellen Wert in die temp Variable
 				Map.put(employee.department, employee.getFullSalary() + temp);
+			}
+			else {
+				Map.put(employee.department, employee.getFullSalary());
 			}
 		}
 		return Map;
